@@ -16,10 +16,10 @@
 
         <StackPanel Orientation="Horizontal"
                     Margin="0,0,0,10">
-            
+
             <Border Width="400"
                     Height="200">
-                
+
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2" >
                         <GradientStop Color="#5bc3ff" Offset="0.0"/>
@@ -46,24 +46,20 @@
                                     Margin="20,10,10,0"/>
                     </StackPanel>
 
-                    <!-- Watermark-style image inside the blue card -->
-                    <Image Width="140"
-                           Height="140"
-                           Source="/Images/Savingaccount-removebg-preview.png"
+                    <Image Width="241"
                            HorizontalAlignment="Right"
-                           VerticalAlignment="Bottom"
-                           Margin="0,0,-36,-14"
-                           Opacity="0.12"
-                           IsHitTestVisible="False">
+                           Margin="0,13,-6,-19"
+                           Source="/Images/Savingaccount-removebg-preview.png" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
                                 <SkewTransform/>
-                                <RotateTransform Angle="-18"/>
+                                <RotateTransform Angle="-19.77"/>
                                 <TranslateTransform/>
                             </TransformGroup>
                         </Image.RenderTransform>
                     </Image>
+
 
                 </Grid>
 
@@ -82,7 +78,7 @@
                 </Border.Background>
 
             </Border>
-            
+
         </StackPanel>
 
         <StackPanel>
@@ -92,7 +88,7 @@
                     <Setter Property="Margin" Value="15,0,0,0"/>
                 </Style>
             </StackPanel.Resources>
-            
+
             <TextBlock Text="Most Popular"
             Foreground="White"
             FontSize="20"
@@ -104,7 +100,9 @@
                         Height="150"
                         Background="#844eff"
                         CornerRadius="10"
-                        Margin="0"/>
+                        Margin="0"
+/>
+
                 <Border Width="150"
                         Height="150"
                         Background="#4e99ff"
@@ -120,7 +118,7 @@
                         Background="#ecff40"
                         CornerRadius="10"
                         />
-                
+
             </StackPanel>
 
         </StackPanel>
