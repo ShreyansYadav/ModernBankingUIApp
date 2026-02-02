@@ -1,54 +1,51 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Style TargetType="{x:Type TextBox}"
-           x:Key="ModernTextBox">
+
+    <Style x:Key="ModernTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="#1E1C2A"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#3A3750"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="10,0,10,0"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border CornerRadius="10"
-                            Background="#353340"
-                            Width="200" Height="40">
-
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8">
                         <Grid>
-                            <Rectangle StrokeThickness="1"/>
-                            <TextBox Margin="1"
-                                     Text="{TemplateBinding Text}"
-                                     BorderThickness="0"
-                                     Background="Transparent"
-                                     VerticalContentAlignment="Center"
-                                     Padding="5"
-                                     Foreground="#CFCFCF"
-                                     x:Name="SerchBox"/>
+                            <!-- content host required for TextBox templates -->
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Margin="0"
+                                          VerticalAlignment="Center"/>
 
-                            <TextBlock IsHitTestVisible="False"
-                                       Text="Search"
+                            <!-- placeholder watermark -->
+                            <TextBlock Text="Search"
+                                       IsHitTestVisible="False"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
-                                       Margin="10,0,0,0"
-                                       FontSize="11"
-                                       Foreground="DarkGray"
-                                       Grid.Column="1">
-
-
+                                       Margin="12,0,0,0"
+                                       FontSize="12"
+                                       Foreground="DarkGray">
                                 <TextBlock.Style>
-                                    <Style TargetType="{x:Type TextBlock}">
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                            <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource TemplatedParent}}" Value="">
                                                 <Setter Property="Visibility" Value="Visible"/>
                                             </DataTrigger>
                                         </Style.Triggers>
-                                        <Setter Property="Visibility" Value="Hidden"/>
                                     </Style>
                                 </TextBlock.Style>
-                                
                             </TextBlock>
-                            
                         </Grid>
-
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>    
+    </Style>
+
 </ResourceDictionary>
-    
