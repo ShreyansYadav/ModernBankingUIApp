@@ -34,7 +34,8 @@
                        HorizontalAlignment="Left"
                        Foreground="White"
                        FontSize="22"
-                       Margin="20,0,0,0"/>
+                       Margin="20,0,0,0"
+                       FontFamily="/Fonts/#Poppins"/>
 
             <!-- Left column: menu below (logo removed; image moved into HomeView card) -->
             <DockPanel Grid.Row="1" Grid.Column="0" LastChildFill="True" Margin="0">
@@ -60,6 +61,7 @@
                                  FontSize="14"
                                  Style="{StaticResource MenuButtonTheme}"/>
                 </StackPanel>
+                
             </DockPanel>
 
             <TextBox Width="250"

@@ -29,7 +29,8 @@
                                        HorizontalAlignment="Left"
                                        Margin="12,0,0,0"
                                        FontSize="12"
-                                       Foreground="DarkGray">
+                                       Foreground="DarkGray"
+                                       FontFamily="/Fonts/#Poppins">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock">
                                         <Setter Property="Visibility" Value="Collapsed"/>

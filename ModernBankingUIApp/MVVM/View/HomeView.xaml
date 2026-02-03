@@ -12,7 +12,8 @@
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Left"
-                   Margin="0,0,0,20"/>
+                   Margin="0,0,0,20"
+                   FontFamily="/Fonts/#Poppins"/>
 
         <StackPanel Orientation="Horizontal"
                     Margin="0,0,0,10">
@@ -38,12 +39,14 @@
                         <TextBlock Text="Savings Account"
                                    Foreground="White"
                                    FontSize="28"
-                                   Margin="20,10,10,0"/>
+                                   Margin="20,10,10,0"
+                                   FontFamily="/Fonts/#Poppins"/>
 
                         <TextBlock Text="Get Started Today!"
                                     Foreground="White"
                                     FontSize="18"
-                                    Margin="20,10,10,0"/>
+                                    Margin="20,10,10,0"
+                                   FontFamily="/Fonts/#Poppins"/>
                     </StackPanel>
 
                     <Image Width="241"
@@ -93,7 +96,8 @@
             Foreground="White"
             FontSize="20"
             HorizontalAlignment="Left"
-            Margin="0,0,0,10"/>
+            Margin="0,0,0,10"
+            FontFamily="/Fonts/#Poppins"/>
 
             <StackPanel Orientation="Horizontal">
                 <Border Width="150"
