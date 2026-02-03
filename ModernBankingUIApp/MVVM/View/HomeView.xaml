@@ -90,9 +90,15 @@
                     <StackPanel>
                         <TextBlock Text="Student Loans"
                                    Foreground="White"
-                                   FontSize="24"
+                                   FontSize="28"
                                    Margin="015,30,10,0"
                                    FontFamily="/Fonts/#Poppins-Regular"/>
+
+                        <TextBlock Text="Get Started!"
+                                Foreground="White"
+                                FontSize="18"
+                                Margin="015,30,10,0"
+                                FontFamily="/Fonts/#Poppins-Regular"/>
                     </StackPanel>
                 </Grid>
 
