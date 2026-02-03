@@ -9,14 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\Poppins-Regular.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Fonts\Poppins-Regular.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
