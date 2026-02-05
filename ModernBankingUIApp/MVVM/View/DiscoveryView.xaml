@@ -6,8 +6,151 @@
              xmlns:local="clr-namespace:ModernBankingUIApp.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="#1B1B1B">
-    <Grid>
+             Background="Transparent">
+    <!-- Make the view vertically scrollable -->
+    <ScrollViewer VerticalScrollBarVisibility="Hidden"
+                  HorizontalScrollBarVisibility="Hidden"
+                  Padding="8">
+        <StackPanel>
+            <TextBlock Text="Accounts"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,20"
+                       FontFamily="/Fonts/#Poppins-Regular"/>
             
-    </Grid>
+            <!-- Accounts section: horizontal scrolling only -->
+            <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollBarVisibility="Disabled"
+                          PanningMode="HorizontalOnly"
+                          Margin="0,0,0,10">
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="400"
+                            Height="200"
+                            Margin="0,0,16,0">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2" >
+                                <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                                <GradientStop Color="#3aa0ff" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10"
+                                               RadiusY="10"
+                                               Rect="0,0,400,200"/>
+                        </Border.Clip>
+
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="Savings Account"
+                                           Foreground="White"
+                                           FontSize="28"
+                                           Margin="20,10,10,0"
+                                           FontFamily="/Fonts/#Poppins-Regular"/>              
+
+                                <TextBlock Text="Get Started Today!"
+                                           Foreground="White"
+                                           FontSize="18"
+                                           Margin="20,10,10,0"
+                                           FontFamily="/Fonts/#Poppins-Regular"/>
+                            </StackPanel>
+
+                            <Image Width="241"
+                                   HorizontalAlignment="Right"
+                                   Margin="0,13,-6,-19"
+                                   Source="/Images/Savingaccount-removebg-preview.png" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-19.77"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Border>
+
+                    <!-- Example additional card so horizontal scroll is usable.
+                         Keep or remove; additional cards will be scrollable. -->
+                    <Border Width="200"
+                            Height="200"
+                            CornerRadius="10"
+                            Margin="45,0,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2" >
+                                <GradientStop Color="#ffc554" Offset="0.0"/>
+                                <GradientStop Color="#ffb73a" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="Student Loans"
+                                            Foreground="White"
+                                            FontSize="28"
+                                            Margin="015,30,10,0"
+                                            FontFamily="/Fonts/#Poppins-Regular"/>
+
+                                <TextBlock Text="Get Started!"
+                                                Foreground="White"
+                                                FontSize="18"
+                                                Margin="015,30,10,0"
+                                                FontFamily="/Fonts/#Poppins-Regular"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+
+                    <Border Width="215"
+                            Height="200"
+                            Margin="45,0,0,0">
+                        
+                        
+                    </Border>
+                    
+                    <!-- Add more cards here if needed -->
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- additional content below will still be vertically scrollable -->
+            <StackPanel>
+
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Margin" Value="15,0,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+
+                <TextBlock Text="Most Popular"
+                           Foreground="White"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="0,0,0,10"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="150"
+                            Height="150"
+                            Background="#844eff"
+                            CornerRadius="10"
+                            Margin="0,0,0,10"/>
+                    
+                    <Border Width="150"
+                            Height="150"
+                            Background="#4e99ff"
+                            CornerRadius="10"/>
+                    <Border Width="150"
+                            Height="150"
+                            Background="#4eff91"
+                            CornerRadius="10"/>
+                    <Border Width="150"
+                            Height="150"
+                            Background="#ecff40"
+                            CornerRadius="10"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>
