@@ -12,6 +12,8 @@ namespace ModernBankingUIApp.MVVM.ViewModel
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand DiscoveryViewCommand { get; set; }
 
+        public RelayCommand SettingsView { get; set; }
+        public SettingsViewCommand SettingsVM { get; }
         public HomeViewModel HomeVM { get; set; }
         public DiscoveryViewModel DiscoveryVM { get; set; }
 
@@ -31,6 +33,7 @@ namespace ModernBankingUIApp.MVVM.ViewModel
         
         public MainViewModel()
         {
+            SettingsVM = new SettingsViewCommand();
             HomeVM = new HomeViewModel();
             DiscoveryVM = new DiscoveryViewModel();
             CurrentView = HomeVM;   
@@ -43,6 +46,11 @@ namespace ModernBankingUIApp.MVVM.ViewModel
             DiscoveryViewCommand = new RelayCommand(o =>
             {
                 CurrentView = DiscoveryVM;
+            });
+
+            SettingsView = new RelayCommand(o =>
+            {
+                CurrentView = SettingsVM;
             });
         }
     }
