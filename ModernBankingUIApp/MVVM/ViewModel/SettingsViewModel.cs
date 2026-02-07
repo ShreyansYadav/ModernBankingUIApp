@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ModernBankingUIApp.MVVM.ViewModel
 {
-    class SettingsViewCommand
+    class SettingsViewModel
     {
 
     }
