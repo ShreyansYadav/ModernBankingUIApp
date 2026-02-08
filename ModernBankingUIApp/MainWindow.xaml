@@ -11,7 +11,7 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
-        Icon="/Icon/">
+        Icon="/Images/Icon/Logo.ico.jpg">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
