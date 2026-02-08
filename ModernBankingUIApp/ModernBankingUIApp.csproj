@@ -9,8 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\Icon\" />
+    <None Remove="Images\Icon\Logo.ico.jpg" />
+    <None Remove="Images\Savingaccount-removebg-preview.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Icon\Logo.ico.jpg" />
+    <Resource Include="Images\Savingaccount-removebg-preview.png" />
   </ItemGroup>
 
 </Project>

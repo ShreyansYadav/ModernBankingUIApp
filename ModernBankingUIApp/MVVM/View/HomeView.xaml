@@ -7,147 +7,277 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <StackPanel>
-        <TextBlock Text="Discover"
-                   Foreground="White"
-                   FontSize="28"
-                   HorizontalAlignment="Left"
-                   Margin="0,0,0,20"
-                   FontFamily="/Fonts/#Poppins-Regular"/>
+    <Grid>
+        <!-- Main scrollable content -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      Panel.ZIndex="0">
+            <StackPanel>
+                <TextBlock Text="Discover"
+                           Foreground="White"
+                           FontSize="28"
+                           HorizontalAlignment="Left"
+                           Margin="0,0,0,20"
+                           FontFamily="/Fonts/#Poppins"/>
 
-        <StackPanel Orientation="Horizontal"
-                    Margin="0,0,0,10">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,10">
 
-            <Border Width="400"
-                    Height="200">
+                    <Border Width="400"
+                            Height="200">
 
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2" >
-                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
-                        <GradientStop Color="#3aa0ff" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                                <GradientStop Color="#3aa0ff" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
 
-                <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                                       RadiusY="10"
-                                       Rect="0,0,400,200"/>
-                </Border.Clip>
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10"
+                                               RadiusY="10"
+                                               Rect="0,0,400,200"/>
+                        </Border.Clip>
 
-                <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Savings Account"
-                                   Foreground="White"
-                                   FontSize="28"
-                                   Margin="20,10,10,0"
-                                   FontFamily="/Fonts/#Popppins-Regular"/>
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="Savings Account"
+                                           Foreground="White"
+                                           FontSize="28"
+                                           Margin="20,10,10,0"
+                                           FontFamily="/Fonts/#Poppins"/>
 
-                        <TextBlock Text="Get Started Today!"
+                                <TextBlock Text="Get Started Today!"
+                                           Foreground="White"
+                                           FontSize="18"
+                                           Margin="20,10,10,0"
+                                           FontFamily="/Fonts/#Poppins"/>
+                            </StackPanel>
+
+                            <Image Width="241"
+                                   HorizontalAlignment="Right"
+                                   Margin="0,13,-6,-19"
+                                   Source="/Images/Savingaccount-removebg-preview.png" 
+                                   RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-19.77"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                    </Border>
+
+                    <Border Width="200"
+                            Height="200"
+                            CornerRadius="10"
+                            Margin="45,0,0,0">
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="#ffc553" Offset="0.0"/>
+                                <GradientStop Color="DarkOrange" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10"
+                                               RadiusY="10"
+                                               Rect="0,0,400,200"/>
+                        </Border.Clip>
+
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="Student Loans"
+                                           Foreground="White"
+                                           FontSize="28"
+                                           Margin="15,30,10,0"
+                                           FontFamily="/Fonts/#Poppins"/>
+
+                                <TextBlock Text="Get Started!"
+                                           Foreground="White"
+                                           FontSize="18"
+                                           Margin="15,30,10,0"
+                                           FontFamily="/Fonts/#Poppins"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Margin="0,20,0,0">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="Margin" Value="15,0,0,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <TextBlock Text="Most Popular"
+                               Foreground="White"
+                               FontSize="20"
+                               HorizontalAlignment="Left"
+                               Margin="0,0,0,10"
+                               FontFamily="/Fonts/#Poppins"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="150"
+                                Height="150"
+                                Background="#844eff"
+                                CornerRadius="10"
+                                Margin="0"/>
+
+                        <Border Width="150"
+                                Height="150"
+                                Background="#4e99ff"
+                                CornerRadius="10"/>
+
+                        <Border Width="150"
+                                Height="150"
+                                Background="#4eff91"
+                                CornerRadius="10"/>
+
+                        <Border Width="55"
+                                Height="55"
+                                CornerRadius="15"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Margin="30,0,0,0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                                    <GradientStop Color="#3aa0ff" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+
+                            <Button Background="Transparent"
+                                    BorderBrush="Transparent"
                                     Foreground="White"
-                                    FontSize="18"
-                                    Margin="20,10,10,0"
-                                   FontFamily="/Fonts/#Poppins-Regular"/>
+                                    FontSize="12"
+                                    FontFamily="/Fonts/#Poppins"
+                                    Click="ChatButton_Click"
+                                    Cursor="Hand">
+                                <StackPanel HorizontalAlignment="Center"
+                                            VerticalAlignment="Center">
+                                    <Image Source="/Images/Icon/ChatIcon.png"
+                                           Height="30"
+                                           HorizontalAlignment="Center"/>
+                                    <TextBlock Text="Chat"
+                                               Foreground="White"
+                                               FontSize="10"
+                                               HorizontalAlignment="Center"
+                                               FontFamily="/Fonts/#Poppins"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
                     </StackPanel>
-
-                    <Image Width="241"
-                           HorizontalAlignment="Right"
-                           Margin="0,13,-6,-19"
-                           Source="/Images/Savingaccount-removebg-preview.png" RenderTransformOrigin="0.5,0.5">
-                        <Image.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform Angle="-19.77"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </Image.RenderTransform>
-                    </Image>
-
-
-                </Grid>
-
-            </Border>
-
-            <Border Width="200"
-                    Height="200"
-                    CornerRadius="10"
-                    Margin="45,0,0,0">
-
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2" >
-                        <GradientStop Color="#ffc553" Offset="0.0"/>
-                        <GradientStop Color="DarkOrange" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-
-                <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                       RadiusY="10"
-                       Rect="0,0,400,200"/>
-                </Border.Clip>
-
-                <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Student Loans"
-                                   Foreground="White"
-                                   FontSize="28"
-                                   Margin="015,30,10,0"
-                                   FontFamily="/Fonts/#Poppins-Regular"/>
-
-                        <TextBlock Text="Get Started!"
-                                Foreground="White"
-                                FontSize="18"
-                                Margin="015,30,10,0"
-                                FontFamily="/Fonts/#Poppins-Regular"/>
-                    </StackPanel>
-                </Grid>
-
-            </Border>
-
-        </StackPanel>
-
-        <StackPanel>
-
-            <StackPanel.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="Margin" Value="15,0,0,0"/>
-                </Style>
-            </StackPanel.Resources>
-
-            <TextBlock Text="Most Popular"
-            Foreground="White"
-            FontSize="20"
-            HorizontalAlignment="Left"
-            Margin="0,0,0,10"
-            FontFamily="/Fonts/#Poppins-Regular.ttf"/>
-
-            <StackPanel Orientation="Horizontal">
-                <Border Width="150"
-                        Height="150"
-                        Background="#844eff"
-                        CornerRadius="10"
-                        Margin="0"
-/>
-
-                <Border Width="150"
-                        Height="150"
-                        Background="#4e99ff"
-                        CornerRadius="10"
-                        />
-                <Border Width="150"
-                        Height="150"
-                        Background="#4eff91"
-                        CornerRadius="10"
-                        />
-                <Border Width="150"
-                        Height="150"
-                        Background="#ecff40"
-                        CornerRadius="10"
-                        />
-
+                </StackPanel>
             </StackPanel>
+        </ScrollViewer>
 
-        </StackPanel>
+        <!-- Chatbox overlay - always on top -->
+        <Border x:Name="ChatBox"
+                Width="300"
+                Height="400"
+                CornerRadius="15"
+                Background="#2a2d3e"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,0,20,20"
+                Visibility="Collapsed"
+                Panel.ZIndex="999">
 
-    </StackPanel>
+            <Border.Effect>
+                <DropShadowEffect Color="Black" 
+                                  BlurRadius="20" 
+                                  ShadowDepth="5" 
+                                  Opacity="0.5"/>
+            </Border.Effect>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <!-- Header -->
+                <Border Grid.Row="0"
+                        Background="#3a3d4e"
+                        CornerRadius="15,15,0,0">
+                    <Grid>
+                        <TextBlock Text="Chat Support"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   FontFamily="/Fonts/#Poppins"
+                                   VerticalAlignment="Center"
+                                   Margin="15,0,0,0"/>
+
+                        <Button Content="✕"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Margin="0,0,10,0"
+                                Width="30"
+                                Height="30"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Foreground="White"
+                                FontSize="20"
+                                Click="CloseChatButton_Click"
+                                Cursor="Hand"/>
+                    </Grid>
+                </Border>
+
+                <!-- Chat Messages Area -->
+                <ScrollViewer Grid.Row="1"
+                              VerticalScrollBarVisibility="Auto"
+                              Margin="10">
+                    <StackPanel x:Name="ChatMessagesPanel">
+                        <TextBlock Text="Hello! How can we help you today?"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   FontFamily="/Fonts/#Poppins"
+                                   TextWrapping="Wrap"
+                                   Margin="0,10,0,0"/>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <!-- Input Area -->
+                <Border Grid.Row="2"
+                        Background="#3a3d4e"
+                        CornerRadius="0,0,15,15">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox x:Name="ChatInputTextBox"
+                                 Grid.Column="0"
+                                 Background="#2a2d3e"
+                                 Foreground="White"
+                                 BorderBrush="#5bc3ff"
+                                 BorderThickness="1"
+                                 FontSize="14"
+                                 FontFamily="/Fonts/#Poppins"
+                                 Padding="10,8"
+                                 VerticalContentAlignment="Center"
+                                 Text="Type a message..."/>
+
+                        <Button Grid.Column="1"
+                                Content="Send"
+                                Background="#5bc3ff"
+                                Foreground="White"
+                                BorderBrush="Transparent"
+                                FontSize="14"
+                                FontFamily="/Fonts/#Poppins"
+                                Padding="15,8"
+                                Margin="10,0,0,0"
+                                Cursor="Hand"
+                                Click="SendMessageButton_Click"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
 </UserControl>
