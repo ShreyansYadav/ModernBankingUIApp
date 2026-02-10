@@ -16,7 +16,7 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border Background="#272537"
+    <Border Background="#0a0a14"
             CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
