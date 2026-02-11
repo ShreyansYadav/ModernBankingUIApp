@@ -91,5 +91,5 @@ namespace ModernBankingUIApp.MVVM.View
         }
     }
 }
-    
+
 
